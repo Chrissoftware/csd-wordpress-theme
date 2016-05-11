@@ -1,0 +1,19 @@
+.main-menu {
+    > li.highlight-link {
+        &,
+        &.current-menu-item{
+            > a {
+                border-radius: 20px;
+                color: #fff;
+                background: $brand-highlight;
+                padding: 10px 15px;
+                margin-top: 5px;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background: darken( $brand-highlight, 20% );
+                }
+            }
+        }
+    }
+}

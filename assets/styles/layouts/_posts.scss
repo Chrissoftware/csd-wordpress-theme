@@ -1,0 +1,47 @@
+.blog{
+    .hentry {
+        + .hentry {
+            margin: 99px 0 0;
+            padding: 100px 0 0;
+            border-top: 1px solid #dee8ea;
+        }
+    }
+    .entry-title {
+        margin-top: 0;
+    }
+}
+
+
+
+.entry-title {
+    &,a {
+        font-family: "Raleway Bold";
+
+    }
+}
+.entry-title,
+.byline {
+    &,a {
+        color: $darker-color;
+    }
+}
+
+.byline{
+    color: $brand-primary;
+}
+
+.updated,
+.byline {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.updated {
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    border-right: 1px solid $darker-color;
+    span {
+        color: $brand-primary;
+    }
+}
+

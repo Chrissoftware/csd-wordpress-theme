@@ -1,5 +1,10 @@
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
+  <?php if( has_post_thumbnail() ): ?>
+    <figure class="post-thumbnail">
+        <?php the_post_thumbnail( 'full',['class'=>'img-responsive'] ); ?>
+    </figure>
+  <?php endif; ?>
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
       <?php get_template_part('templates/entry-meta'); ?>

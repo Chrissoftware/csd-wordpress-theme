@@ -1,5 +1,7 @@
 <?php use Roots\Sage\Titles; ?>
 
-<div class="page-header">
+<?php if( ! is_front_page() ): ?>
+<header class="page-header">
   <h1><?= Titles\title(); ?></h1>
-</div>
+</header>
+<?php endif; ?>
