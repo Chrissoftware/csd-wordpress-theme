@@ -1,0 +1,60 @@
+*{
+    font-family: "Karla";
+}
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+    font-weight: 900;
+    color: $darker-color;
+    &,a{
+        font-family: "Raleway";
+    }
+
+}
+
+.blog,
+.archive{
+    .post-title {
+        @extend .h2;
+    }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.widget{
+    a {
+        color: $gray-color;
+        @extend .text-uppercase;       
+        &:hover {
+            text-decoration: none;
+            @extend .color-primary;
+        }
+    }
+}
+
+
+
+.main-menu > li > a,
+p {
+    color: $base-color;
+}
+
+.footer-widgets {
+    .widget-title {
+        font-size: 18px;
+    }
+}
+
+.tagcloud {
+    a {
+        @extend .text-uppercase;
+        color: #fff;
+        font-size: 13px!important;
+        padding: 10px 15px;
+        &:hover {
+            text-decoration: none;
+            @extend .color-white;
+        }
+    }
+}

@@ -17,3 +17,58 @@
         }
     }
 }
+.sub-menu {
+    background: #f8f8f8;
+    border: 0;
+    border-radius: 0;
+}
+
+.wp-pagenavi {
+    a,
+    span{
+        padding: 20px 25px;
+        background: $brand-primary;
+        @extend .color-white;
+        border: 0;
+        display: inline-block;
+        &:hover {
+            background: $brand-highlight;
+            border: 0;
+            text-decoration: none;
+        }
+    }
+    span.current {
+        background: $brand-highlight;
+    }
+}
+
+.nav-links {
+    @include clearfix;
+    width: 100%;
+    .nav-previous,
+    .nav-next {
+        background: $brand-highlight;
+        padding: 10px 15px;
+        a{
+            &,
+            &:hover{
+                color: #fff;
+            }
+        }
+
+    }
+    .nav-previous {
+        float: left;
+    }
+    .nav-next {
+        float: right;
+    }
+}
+
+.banner .navbar-toggle {
+    background-color: transparent;
+    border: 0;
+    &:focus {
+        background-color: $brand-highlight;
+    }
+}

@@ -1,0 +1,23 @@
+.topbar-widget {
+    display: inline-block;
+    & + .topbar-widget {
+        margin: 0 0 0 10px;
+    }
+}
+
+.widget{
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.tagcloud {
+    a {
+        display: inline-block;
+        background: $brand-highlight;
+        &:hover{
+            background: darken( $brand-highlight, 25% );
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.site-footer,
+.colophon{
+    padding: 15px 0;
+}
+
+.content-info,
+.colophon{
+    border-top: 1px solid #e5eef0;
+}
+
+.content-info {
+    padding: 45px 15px;
+}
+
+.colophon{
+    @extend .text-center;
+}

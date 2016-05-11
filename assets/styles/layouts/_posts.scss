@@ -5,6 +5,9 @@
             padding: 100px 0 0;
             border-top: 1px solid #dee8ea;
         }
+        &:last-of-type{
+            padding: 100px 0;
+        }
     }
     .entry-title {
         margin-top: 0;

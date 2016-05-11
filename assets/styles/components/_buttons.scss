@@ -5,7 +5,7 @@ button,
     border: 0;
     &,
     &:hover{
-        color: #fff;
+        @extend .color-white;
     }
     &:hover{
         background: darken( $brand-primary, 10% );
@@ -21,13 +21,15 @@ input[type=submit],
 input[type=button],
 input[type=reset],
 button[type=submit]{
-    padding: 15px 33px;
+    @extend .btn;
     background: #29c2e1;
     border: 0;
+    border-radius: 0;
+    @extend .color-white;
     text-transform: uppercase;
     &:hover {
         background: darken(#29c2e1, 25%);
-        color: #fff;
+        @extend .color-white;
     }
     &:focus{
         outline: 0;
@@ -38,7 +40,7 @@ button[type=submit]{
 pre,
 .more-link{
     background: $brand-highlight;
-    color: #fff;
+    @extend .color-white;
 }
 
 .btn-highlight,
@@ -46,11 +48,11 @@ pre,
     &:hover,
     &:visited{
         background: darken($brand-highlight, 25%);
-        color: #fff;
+        @extend .color-white;
     }
     &:focus{
         outline: 0;
-        color: #fff;
+        @extend .color-white;
     }
     &:visited {
         text-decoration: underline;

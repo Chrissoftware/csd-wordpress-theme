@@ -1,8 +1,22 @@
-<header class="banner navbar navbar-default navbar-static-top" role="banner">
-    <div class="container text-right">
-        <span class="contact-details"></span>
-        <span class="contact-details"></span>
+<?php
+$themeOptions = TitanFramework::getInstance( 'csd' );
+$enable_top_bar = $themeOptions->getOption( 'enable_top_bar' );
+$company_contact_number = $themeOptions->getOption( 'company_contact_number' );
+$company_email_address = $themeOptions->getOption( 'company_email_address' );
+?>
+<?php if( $enable_top_bar ): ?>
+<section class="topbar">
+    <div class="container">
+        <div class="row">
+            <?php if( is_active_sidebar( 'topbar' ) ): ?>
+                <?php dynamic_sidebar( 'topbar' ); ?>
+            <?php endif; ?>
+        </div>
     </div>
+</section>
+<?php endif; ?>
+<header class="banner navbar navbar-default navbar-static-top" role="banner">
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">

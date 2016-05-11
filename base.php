@@ -3,6 +3,8 @@
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
 
+$themeOptions = \TitanFramework::getInstance( 'csd' );
+$show_breadcrumbs = $themeOptions->getOption( 'show_breadcrumbs' );
 ?>
 
 <!doctype html>
@@ -18,6 +20,11 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+    <?php if( $show_breadcrumbs && function_exists('bcn_display') ): ?>
+        <div class="breadcrumbs container" typeof="BreadcrumbList" vocab="http://schema.org/">
+            <?php bcn_display(); ?>
+        </div>
+    <?php endif; ?>
     <?php get_template_part('templates/page', 'header'); ?>
     <div class="wrap container" role="document">
       <div class="content row">
